@@ -19,6 +19,9 @@ const ContentValidator = require('./contentValidator');
 const Sheet = require('./sheet');
 const ExceptionMessages = require('./exceptionMessages');
 
+const columns = require('./../../data/columns');
+const data = require('./../../data/data');
+
 const plotRadar = function (title, blips) {
     document.title = 'Tech Radar'; // document.title = title
     d3.selectAll(".loading").remove();
@@ -104,13 +107,14 @@ const CSVDocument = function (url) {
     var self = {};
 
     self.build = function () {
-        d3.csv(url, createBlips);
+        // d3.csv(url, createBlips);
+        createBlips(data);
     }
 
     var createBlips = function (data) {
         try {
-            var columnNames = data['columns'];
-            delete data['columns'];
+            var columnNames = columns.slice();
+            // delete data['columns'];
             var contentValidator = new ContentValidator(columnNames);
             contentValidator.verifyContent();
             contentValidator.verifyHeaders();

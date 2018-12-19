@@ -1,0 +1,1 @@
+module.exports = ["name", "ring", "quadrant", "isNew", "description"];
