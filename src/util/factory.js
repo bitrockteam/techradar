@@ -164,8 +164,9 @@ const FileName = function (url) {
 
 const GoogleSheetInput = function () {
     var self = {};
-    const csv = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTJjDryMH6dTtmDmQkSkvqAcA0WCANu2euJ3l82VY9ecZBDnUBOrM_xMgGcW0N81gcNPvvPvg1S7szY/pub?output=csv';
-    const BitrockData = `sheetId=${encodeURIComponent(csv)}`;
+    const csv = 'https://raw.githubusercontent.com/bitrockteam/techradar/master/data.csv';
+    const BitrockData = 'sheetId=' + encodeURIComponent(csv);
+    // const BitrockData = `sheetId=${encodeURIComponent(csv)}`;
 
     self.build = function () {
         const url = window.location.search.substring(1);
@@ -227,7 +228,7 @@ function plotLoading(content) {
 function plotLogo(content) {
     content.append('div')
         .attr('class', 'input-sheet__logo')
-        .html('<a href="https://www.thoughtworks.com"><img src="/images/tw-logo.png" / ></a>');
+        .html('<a href="https://www.thoughtworks.com"><img src="./images/tw-logo.png" / ></a>');
 }
 
 function plotFooter(content) {
@@ -237,10 +238,10 @@ function plotFooter(content) {
         .append('div')
         .attr('class', 'footer-content')
         .append('p')
-        .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. '
-        + 'By using this service you agree to <a href="https://www.thoughtworks.com/radar/tos">ThoughtWorks\' terms of use</a>. '
-        + 'You also agree to our <a href="https://www.thoughtworks.com/privacy-policy">privacy policy</a>, which describes how we will gather, use and protect any personal data contained in your public Google Sheet. '
-        + 'This software is <a href="https://github.com/thoughtworks/build-your-own-radar">open source</a> and available for download and self-hosting.');
+        // .html(`Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. 
+        //     By using this service you agree to <a href="https://www.thoughtworks.com/radar/tos">ThoughtWorks\' terms of use</a>.
+        //     You also agree to our <a href="https://www.thoughtworks.com/privacy-policy">privacy policy</a>, which describes how we will gather, use and protect any personal data contained in your public Google Sheet. 
+        //     This software is <a href="https://github.com/thoughtworks/build-your-own-radar">open source</a> and available for download and self-hosting.`);
 
 
 

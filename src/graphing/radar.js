@@ -399,10 +399,7 @@ const Radar = function (size, radar) {
       .style('pointer-events', 'auto');
   }
 
-  function plotRadarHeader(
-    url = 'https://www.thoughtworks.com',
-    logo = '/images/logo.png'
-  ) {
+  function plotRadarHeader(url, logo) {
     var header = d3.select('body').insert('header', "#radar");
     header.append('div')
       .attr('class', 'radar-title')
@@ -416,9 +413,10 @@ const Radar = function (size, radar) {
     header.select('.radar-title')
       .append('div')
       .attr('class', 'radar-title__logo')
-      .html(`<a href="${url}" target="_blank"> 
-        <img src="${logo}" /> 
-      </a>`);
+      .html('<a href="'+url+'" target="_blank"> <img src="'+logo+'" /> </a>');
+      // .html(`<a href="${url}" target="_blank"> 
+      //   <img src="${logo}" /> 
+      // </a>`);
 
     return header;
   }
@@ -457,10 +455,10 @@ const Radar = function (size, radar) {
       .append('div')
       .attr('class', 'footer-content')
       .append('p')
-      .html('Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. '
-      + 'By using this service you agree to <a href="https://www.thoughtworks.com/radar/tos">ThoughtWorks\' terms of use</a>. '
-      + 'You also agree to our <a href="https://www.thoughtworks.com/privacy-policy">privacy policy</a>, which describes how we will gather, use and protect any personal data contained in your public Google Sheet. '
-      + 'This software is <a href="https://github.com/thoughtworks/build-your-own-radar">open source</a> and available for download and self-hosting.');
+      // .html(`Powered by <a href="https://www.thoughtworks.com"> ThoughtWorks</a>. 
+      //   By using this service you agree to <a href="https://www.thoughtworks.com/radar/tos">ThoughtWorks\' terms of use</a>.
+      //   You also agree to our <a href="https://www.thoughtworks.com/privacy-policy">privacy policy</a>, which describes how we will gather, use and protect any personal data contained in your public Google Sheet. 
+      //   This software is <a href="https://github.com/thoughtworks/build-your-own-radar">open source</a> and available for download and self-hosting.`);
   }
 
   function mouseoverQuadrant(order) {
@@ -540,7 +538,7 @@ const Radar = function (size, radar) {
     rings = radar.rings();
     quadrants = radar.quadrants();
     var header = plotRadarHeader(
-      'https://www.bitrock.it', '/images/BitrockLogo.png');
+      'https://www.bitrock.it', './images/BitrockLogo.png');
 
     plotQuadrantButtons(quadrants, header);
 
