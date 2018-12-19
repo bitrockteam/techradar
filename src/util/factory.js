@@ -20,7 +20,7 @@ const Sheet = require('./sheet');
 const ExceptionMessages = require('./exceptionMessages');
 
 const plotRadar = function (title, blips) {
-    document.title = title;
+    document.title = 'Tech Radar'; // document.title = title
     d3.selectAll(".loading").remove();
 
     var rings = _.map(_.uniqBy(blips, 'ring'), 'ring');
@@ -164,10 +164,13 @@ const FileName = function (url) {
 
 const GoogleSheetInput = function () {
     var self = {};
-    
+    const csv = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTJjDryMH6dTtmDmQkSkvqAcA0WCANu2euJ3l82VY9ecZBDnUBOrM_xMgGcW0N81gcNPvvPvg1S7szY/pub?output=csv';
+    const BitrockData = `sheetId=${encodeURIComponent(csv)}`;
+
     self.build = function () {
-        var domainName = DomainName(window.location.search.substring(1));
-        var queryParams = QueryParams(window.location.search.substring(1));
+        const url = window.location.search.substring(1);
+        var domainName = DomainName(BitrockData);
+        var queryParams = QueryParams(BitrockData);
 
         if (domainName && queryParams.sheetId.endsWith('csv')) {
             var sheet = CSVDocument(queryParams.sheetId);

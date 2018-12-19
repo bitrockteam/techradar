@@ -399,7 +399,10 @@ const Radar = function (size, radar) {
       .style('pointer-events', 'auto');
   }
 
-  function plotRadarHeader() {
+  function plotRadarHeader(
+    url = 'https://www.thoughtworks.com',
+    logo = '/images/logo.png'
+  ) {
     var header = d3.select('body').insert('header', "#radar");
     header.append('div')
       .attr('class', 'radar-title')
@@ -413,7 +416,9 @@ const Radar = function (size, radar) {
     header.select('.radar-title')
       .append('div')
       .attr('class', 'radar-title__logo')
-      .html('<a href="https://www.thoughtworks.com"> <img src="/images/logo.png" /> </a>');
+      .html(`<a href="${url}" target="_blank"> 
+        <img src="${logo}" /> 
+      </a>`);
 
     return header;
   }
@@ -534,7 +539,8 @@ const Radar = function (size, radar) {
 
     rings = radar.rings();
     quadrants = radar.quadrants();
-    var header = plotRadarHeader();
+    var header = plotRadarHeader(
+      'https://www.bitrock.it', '/images/BitrockLogo.png');
 
     plotQuadrantButtons(quadrants, header);
 
