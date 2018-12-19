@@ -1,3 +1,5 @@
+// import Tabletop from 'tabletop';
+
 const d3 = require('d3');
 const Tabletop = require('tabletop');
 const _ = {

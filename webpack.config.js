@@ -2,91 +2,70 @@
 
 const webpack = require('webpack');
 const path = require('path');
-const buildPath = path.join(__dirname, './dist');
 const args = require('yargs').argv;
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-let isProd = args.prod;
-let isDev = args.dev;
+const isProd = args.prod;
 
-let main = ['./src/site.js'];
-let common = ['./src/common.js'];
-let devtool;
-
-if (isDev) {
-    main.push('webpack-dev-server/client?http://0.0.0.0:8080');
-    devtool = 'source-map';
-}
-
-let plugins = [
-    new ExtractTextPlugin('[name].[hash].css'),
-    new HtmlWebpackPlugin({
-        template: './src/index.html',
-        chunks: ['main'],
-        inject: 'body'
-    }),
-    new HtmlWebpackPlugin({
-        template: './src/error.html',
-        chunks: ['common'],
-        inject: 'body',
-        filename: 'error.html'
-    })
+const plugins = [  
+  new HtmlWebpackPlugin({
+    template: './src/index.html',
+    chunks: ['main'],
+    // inject: 'body'
+  }),
 ];
 
-if (isProd) {
-    plugins.push(
-        new webpack.NoErrorsPlugin(),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            mangle: true
-        }),
-        new webpack.optimize.OccurenceOrderPlugin()
-    );
-}
-
 module.exports = {
-    entry: {
-        'main' : main,
-        'common' : common
-    },
-    node: {
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty',
-        child_process: 'empty'
-    },
+  entry: {
+    main: './src/site.js',
+    common: './src/common.js'
+  },
+  
+  output: {
+    path: path.join(__dirname, './dist'),
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[hash].js'
+  },
 
-    output: {
-        path: buildPath,
-        // publicPath: '/',
-        filename: '[name].[hash].js'
-    },
+  mode: isProd ? 'production' : 'development',
 
-    module: {
-        loaders: [
-            { test: /\.json$/, loader: 'json'},
-            { test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
-            { test: /\.scss$/, exclude: /node_modules/, loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass') },
-            { test: /\.(png|jpg|ico)$/, exclude: /node_modules/, loader: 'file-loader?name=images/[name].[ext]&context=./src/images' }
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    child_process: 'empty'
+  },
+
+  module: {
+    rules: [
+      { 
+        test: /\.scss$/, 
+        exclude: /node_modules/, 
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
         ]
-    },
+      },
+      { 
+        test: /\.(png|jpg|ico)$/, 
+        exclude: /node_modules/, 
+        use: ['file-loader?name=images/[name].[ext]&context=./src/images'] 
+      }
+    ]
+  },
 
-    quiet: false,
-    noInfo: false,
+  plugins: plugins,
 
-    plugins: plugins,
+  devtool: 'source-map',
 
-    devtool: devtool,
-
-    devServer: {
-        contentBase: buildPath,
-        host: '0.0.0.0',
-        port: 8080
-    }
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 8080,
+    hot: true,
+    historyApiFallback: true
+  }
 };
 
