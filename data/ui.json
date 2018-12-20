@@ -3,14 +3,21 @@
     "name": "Typescript",
     "ring": "assess",
     "quadrant": "ui engineering",
-    "isNew": "FALSE",
+    "isNew": "TRUE",
     "description": "More secure & resilient code."
+  },
+  {
+    "name": "Standards",
+    "ring": "trial",
+    "quadrant": "ui engineering",
+    "isNew": "FALSE",
+    "description": "ES 2015 & above, ES Modules, Immutability, Web Components, etc.. "
   },
   {
     "name": "Conversational UI",
     "ring": "assess",
     "quadrant": "ui engineering",
-    "isNew": "FALSE",
+    "isNew": "TRUE",
     "description": "Chat based products, voice interactions, smart assistants (Google, Alexa) integration."
   },
   {
@@ -18,20 +25,20 @@
     "ring": "hold",
     "quadrant": "ui engineering",
     "isNew": "FALSE",
-    "description": ""
+    "description": "Framework as an architecture driver."
   },
   {
     "name": "Design System",
     "ring": "trial",
     "quadrant": "ui engineering",
-    "isNew": "FALSE",
+    "isNew": "TRUE",
     "description": "Amber DS as a base pillar for the next gen projects where possible."
   },
   {
     "name": "UI & UX first",
     "ring": "adopt",
     "quadrant": "ui engineering",
-    "isNew": "FALSE",
+    "isNew": "TRUE",
     "description": "UX as a business factor, UI design evolves during development iterations."
   },
   {

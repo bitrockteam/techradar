@@ -25,10 +25,10 @@ open the browser and access the application at `localhost:8080`.
 ### Setting up your data
 In the `/data` folder there are four `.json` files, each one containing the data of its own quadrant. Data is provided as an array of objects following this schema:
 
-```json
+```js
 {
   "name": "Gitops",     // guess it...
-  "ring": "assess",     // hold, trial, assess, adopt
+  "ring": "assess",     // hold, assess, trial, adopt
   "quadrant": "devops", // devops, ui engineering, engineering, methodologies
   "isNew": "FALSE",     // TRUE / FALSE
   "description": ""     // guess it...
