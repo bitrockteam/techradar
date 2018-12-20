@@ -1,10 +1,17 @@
 [
   {
-    "name": "Typescript",
-    "ring": "assess",
+    "name": "UI & UX first",
+    "ring": "adopt",
     "quadrant": "ui engineering",
     "isNew": "TRUE",
-    "description": "More secure & resilient code."
+    "description": "UX as a business factor, UI design evolves during development iterations."
+  },
+  {
+    "name": "Cross framework",
+    "ring": "adopt",
+    "quadrant": "ui engineering",
+    "isNew": "FALSE",
+    "description": "Vue.js, React, Angular 7, etc..."
   },
   {
     "name": "Standards",
@@ -12,6 +19,20 @@
     "quadrant": "ui engineering",
     "isNew": "FALSE",
     "description": "ES 2015 & above, ES Modules, Immutability, Web Components, etc.. "
+  },
+  {
+    "name": "Design System",
+    "ring": "trial",
+    "quadrant": "ui engineering",
+    "isNew": "TRUE",
+    "description": "Amber DS as a base pillar for the next gen projects where possible."
+  },
+  {
+    "name": "Typescript",
+    "ring": "assess",
+    "quadrant": "ui engineering",
+    "isNew": "TRUE",
+    "description": "More secure & resilient code."
   },
   {
     "name": "Conversational UI",
@@ -26,26 +47,5 @@
     "quadrant": "ui engineering",
     "isNew": "FALSE",
     "description": "Framework as an architecture driver."
-  },
-  {
-    "name": "Design System",
-    "ring": "trial",
-    "quadrant": "ui engineering",
-    "isNew": "TRUE",
-    "description": "Amber DS as a base pillar for the next gen projects where possible."
-  },
-  {
-    "name": "UI & UX first",
-    "ring": "adopt",
-    "quadrant": "ui engineering",
-    "isNew": "TRUE",
-    "description": "UX as a business factor, UI design evolves during development iterations."
-  },
-  {
-    "name": "Cross framework",
-    "ring": "adopt",
-    "quadrant": "ui engineering",
-    "isNew": "FALSE",
-    "description": "Vue.js, React, Angular 7, etc..."
   }
 ]

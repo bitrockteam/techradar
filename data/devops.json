@@ -7,8 +7,15 @@
     "description": ""
   },
   {
-    "name": "Openshift",
-    "ring": "trial",
+    "name": "Prometheus",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Confluent Platform",
+    "ring": "adopt",
     "quadrant": "devops",
     "isNew": "FALSE",
     "description": ""
@@ -56,6 +63,13 @@
     "description": ""
   },
   {
+    "name": "Openshift",
+    "ring": "trial",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
     "name": "Service Mesh",
     "ring": "trial",
     "quadrant": "devops",
@@ -63,22 +77,8 @@
     "description": ""
   },
   {
-  "name": "Prometheus",
-  "ring": "adopt",
-  "quadrant": "devops",
-  "isNew": "FALSE",
-  "description": ""
-},
-  {
     "name": "Docker Swarm",
     "ring": "hold",
-    "quadrant": "devops",
-    "isNew": "FALSE",
-    "description": ""
-  },
-  {
-    "name": "Confluent Platform",
-    "ring": "adopt",
     "quadrant": "devops",
     "isNew": "FALSE",
     "description": ""

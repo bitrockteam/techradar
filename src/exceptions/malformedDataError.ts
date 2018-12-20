@@ -1,5 +1,5 @@
-const MalformedDataError = function(message){
-  this.message=message;
+const MalformedDataError = function(message :string) {
+  this.message = message;
 };
 
 Object.setPrototypeOf(MalformedDataError, Error);

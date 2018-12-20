@@ -63,7 +63,7 @@ module.exports = {
         use: ['file-loader?name=images/[name].[ext]&context=./src/images'] 
       },
       {
-        test: /\.ts?$/,
+        test: /\.ts|js?$/,
         use: 'ts-loader',
         exclude: /node_modules/
       }

@@ -1,7 +1,7 @@
 [
   {
-    "name": "Event storming",
-    "ring": "assess",
+    "name": "Scrum",
+    "ring": "adopt",
     "quadrant": "methodologies",
     "isNew": "FALSE",
     "description": ""
@@ -14,15 +14,15 @@
     "description": ""
   },
   {
-    "name": "Waterfall",
-    "ring": "hold",
+    "name": "Event storming",
+    "ring": "assess",
     "quadrant": "methodologies",
     "isNew": "FALSE",
     "description": ""
   },
   {
-    "name": "Scrum",
-    "ring": "adopt",
+    "name": "Waterfall",
+    "ring": "hold",
     "quadrant": "methodologies",
     "isNew": "FALSE",
     "description": ""

@@ -1,5 +1,12 @@
-const IDEAL_BLIP_WIDTH = 22;
-const Blip = function (name, ring, isNew, topic, description) {
+const IDEAL_BLIP_WIDTH :number = 22;
+
+const Blip = function (
+  name :string, 
+  ring :number, 
+  isNew :boolean, 
+  topic :string, 
+  description :string
+) {
   var self, number;
 
   self = {};
