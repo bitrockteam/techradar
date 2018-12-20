@@ -14,7 +14,28 @@
     "description": ""
   },
   {
-    "name": "Gitops",
+    "name": "GitOps",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "TRUE",
+    "description": ""
+  },
+  {
+    "name": "Terraform",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Elasticsearch",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Hashicorp Vault",
     "ring": "adopt",
     "quadrant": "devops",
     "isNew": "TRUE",
