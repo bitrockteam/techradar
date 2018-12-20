@@ -21,14 +21,28 @@
     "description": ""
   },
   {
-    "name": "Cloud native",
+    "name": "FluentBit/Fluentd",
     "ring": "adopt",
     "quadrant": "devops",
     "isNew": "FALSE",
     "description": ""
   },
   {
-    "name": "Confluent platform",
+  "name": "Prometheus",
+  "ring": "adopt",
+  "quadrant": "devops",
+  "isNew": "FALSE",
+  "description": ""
+},
+  {
+    "name": "Docker Swarm",
+    "ring": "hold",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Confluent Platform",
     "ring": "adopt",
     "quadrant": "devops",
     "isNew": "FALSE",
