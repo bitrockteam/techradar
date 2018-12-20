@@ -8,4 +8,4 @@ SheetNotFoundError.prototype.name = "SheetNotFoundError";
 SheetNotFoundError.prototype.message = "";
 SheetNotFoundError.prototype.constructor = SheetNotFoundError;
 
-module.exports = SheetNotFoundError;
+export { SheetNotFoundError };

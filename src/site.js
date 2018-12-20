@@ -1,8 +1,8 @@
-require('./common');
-require('./images/logo.png');
-require('./images/BitrockLogo.png');
-require('./images/radar_legend.png');
+import './common';
+import './images/logo.png';
+import './images/BitrockLogo.png';
+import './images/radar_legend.png';
 
-const GoogleSheetInput = require('./util/factory');
+import { GoogleSheetInput } from './util/factory';
 
 GoogleSheetInput().build();

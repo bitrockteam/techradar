@@ -8,4 +8,4 @@ const ExceptionMessages = {
   SHEET_NOT_FOUND: 'Oops! We can’t find the Google Sheet you’ve entered. Can you check the URL?'
 };
 
-module.exports = ExceptionMessages;
+export { ExceptionMessages };

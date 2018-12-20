@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Kubernetes",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Openshift",
+    "ring": "trial",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Gitops",
+    "ring": "assess",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Cloud native",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Confluent platform",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  }
+]

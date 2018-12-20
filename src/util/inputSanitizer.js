@@ -1,4 +1,4 @@
-const sanitizeHtml = require('sanitize-html');
+import sanitizeHtml from 'sanitize-html';
 const _ = {
   forOwn: require('lodash/forOwn')
 }
@@ -43,4 +43,4 @@ const InputSanitizer = function () {
     return self;
 };
 
-module.exports = InputSanitizer;
+export { InputSanitizer };

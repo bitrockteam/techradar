@@ -23,4 +23,4 @@ const Quadrant = function (name) {
   return self;
 };
 
-module.exports = Quadrant;
+export { Quadrant };

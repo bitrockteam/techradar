@@ -19,4 +19,4 @@ const RingCalculator = function (numberOfRings, maxRadius) {
   return self;
 };
 
-module.exports = RingCalculator;
+export { RingCalculator };

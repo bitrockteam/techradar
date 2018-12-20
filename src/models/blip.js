@@ -38,4 +38,4 @@ const Blip = function (name, ring, isNew, topic, description) {
   return self;
 };
 
-module.exports = Blip;
+export { Blip };

@@ -1,5 +1,5 @@
-const SheetNotFoundError = require('../../src/exceptions/sheetNotFoundError');
-const ExceptionMessages = require('./exceptionMessages');
+import { SheetNotFoundError } from '../../src/exceptions/sheetNotFoundError';
+import { ExceptionMessages } from './exceptionMessages';
 
 const Sheet = function (sheetReference) {
     var self = {};
@@ -30,4 +30,4 @@ const Sheet = function (sheetReference) {
     return self;
 };
 
-module.exports = Sheet;
+export { Sheet };

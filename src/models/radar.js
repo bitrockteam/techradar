@@ -1,5 +1,5 @@
-const MalformedDataError = require('../exceptions/malformedDataError');
-const ExceptionMessages = require('../util/exceptionMessages');
+import { MalformedDataError } from '../exceptions/malformedDataError';
+import { ExceptionMessages } from '../util/exceptionMessages';
 
 const _ = {
   map: require('lodash/map'),
@@ -65,4 +65,4 @@ const Radar = function() {
   return self;
 };
 
-module.exports = Radar;
+export { Radar };

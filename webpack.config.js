@@ -1,9 +1,9 @@
 'use strict';
 
-const webpack = require('webpack');
 const path = require('path');
 const args = require('yargs').argv;
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isProd = args.prod;
@@ -14,6 +14,11 @@ const plugins = [
     chunks: ['main'],
     // inject: 'body'
   }),
+
+  new BundleAnalyzerPlugin({
+    analyzerMode: isProd ? 'static' : 'server',
+    reportFilename: './report.html'
+  })
 ];
 
 module.exports = {
@@ -37,6 +42,10 @@ module.exports = {
     child_process: 'empty'
   },
 
+  resolve: {
+    extensions: ['.mjs', '.ts', '.js']
+  },
+
   module: {
     rules: [
       { 
@@ -52,6 +61,11 @@ module.exports = {
         test: /\.(png|jpg|ico)$/, 
         exclude: /node_modules/, 
         use: ['file-loader?name=images/[name].[ext]&context=./src/images'] 
+      },
+      {
+        test: /\.ts?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       }
     ]
   },

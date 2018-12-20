@@ -12,4 +12,4 @@ const Ring = function (name, order) {
   return self;
 };
 
-module.exports = Ring;
+export { Ring };

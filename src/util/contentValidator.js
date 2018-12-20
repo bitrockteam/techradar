@@ -5,9 +5,8 @@ const _ = {
   each: require('lodash/each')
 };
 
-const MalformedDataError = require('../../src/exceptions/malformedDataError');
-const ExceptionMessages = require('./exceptionMessages');
-
+import { MalformedDataError } from '../../src/exceptions/malformedDataError';
+import { ExceptionMessages } from './exceptionMessages';
 
 const ContentValidator = function (columnNames) {
   var self = {};
@@ -32,4 +31,4 @@ const ContentValidator = function (columnNames) {
   return self;
 };
 
-module.exports = ContentValidator;
+export { ContentValidator };

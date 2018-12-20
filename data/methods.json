@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Event storming",
+    "ring": "assess",
+    "quadrant": "methodologies",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Open source",
+    "ring": "trial",
+    "quadrant": "methodologies",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Waterfall",
+    "ring": "hold",
+    "quadrant": "methodologies",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Scrum",
+    "ring": "adopt",
+    "quadrant": "methodologies",
+    "isNew": "FALSE",
+    "description": ""
+  }
+]

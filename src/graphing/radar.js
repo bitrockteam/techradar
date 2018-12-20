@@ -1,13 +1,13 @@
-const d3 = require('d3');
-const d3tip = require('d3-tip');
-const Chance = require('chance');
+import * as d3 from 'd3';
+import d3tip from 'd3-tip';
+import Chance from 'chance';
 const _ = require('lodash/core');
 
-const RingCalculator = require('../util/ringCalculator');
+import { RingCalculator } from '../util/ringCalculator';
 
 const MIN_BLIP_WIDTH = 12;
 
-const Radar = function (size, radar) {
+const GraphingRadar = function (size, radar) {
   var svg, radarElement;
 
   var tip = d3tip().attr('class', 'd3-tip').html(function (text) {
@@ -559,4 +559,4 @@ const Radar = function (size, radar) {
   return self;
 };
 
-module.exports = Radar;
+export { GraphingRadar };

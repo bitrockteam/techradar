@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Typescript",
+    "ring": "assess",
+    "quadrant": "ui engineering",
+    "isNew": "FALSE",
+    "description": "More secure & resilient code."
+  },
+  {
+    "name": "Conversational UI",
+    "ring": "assess",
+    "quadrant": "ui engineering",
+    "isNew": "FALSE",
+    "description": "Chat based products, voice interactions, smart assistants (Google, Alexa) integration."
+  },
+  {
+    "name": "One-fits-all framework",
+    "ring": "hold",
+    "quadrant": "ui engineering",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Design System",
+    "ring": "trial",
+    "quadrant": "ui engineering",
+    "isNew": "FALSE",
+    "description": "Amber DS as a base pillar for the next gen projects where possible."
+  },
+  {
+    "name": "UI & UX first",
+    "ring": "adopt",
+    "quadrant": "ui engineering",
+    "isNew": "FALSE",
+    "description": "UX as a business factor, UI design evolves during development iterations."
+  },
+  {
+    "name": "Cross framework",
+    "ring": "adopt",
+    "quadrant": "ui engineering",
+    "isNew": "FALSE",
+    "description": "Vue.js, React, Angular 7, etc..."
+  }
+]

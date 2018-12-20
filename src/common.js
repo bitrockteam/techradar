@@ -1,4 +1,4 @@
-require('./stylesheets/base.scss');
-require('./images/tech-radar-landing-page-wide.png');
-require('./images/tw-logo.png');
-require('./images/favicon.ico');
+import './stylesheets/base.scss';
+import './images/tech-radar-landing-page-wide.png';
+import './images/tw-logo.png';
+import './images/favicon.ico';

@@ -8,4 +8,4 @@ MalformedDataError.prototype.name = "MalformedDataError";
 MalformedDataError.prototype.message = "";
 MalformedDataError.prototype.constructor = MalformedDataError;
 
-module.exports = MalformedDataError;
+export { MalformedDataError };

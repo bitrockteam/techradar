@@ -1,1 +1,7 @@
-module.exports = ["name", "ring", "quadrant", "isNew", "description"];
+export const columns = [
+  "name", 
+  "ring", 
+  "quadrant", 
+  "isNew", 
+  "description"
+];

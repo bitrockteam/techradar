@@ -1,7 +1,8 @@
 // import Tabletop from 'tabletop';
 
-const d3 = require('d3');
-const Tabletop = require('tabletop');
+import * as d3 from 'd3';
+import Tabletop from 'tabletop';
+
 const _ = {
     map: require('lodash/map'),
     uniqBy: require('lodash/uniqBy'),
@@ -9,20 +10,20 @@ const _ = {
     each: require('lodash/each')
 };
 
-const InputSanitizer = require('./inputSanitizer');
-const Radar = require('../models/radar');
-const Quadrant = require('../models/quadrant');
-const Ring = require('../models/ring');
-const Blip = require('../models/blip');
-const GraphingRadar = require('../graphing/radar');
-const MalformedDataError = require('../exceptions/malformedDataError');
-const SheetNotFoundError = require('../exceptions/sheetNotFoundError');
-const ContentValidator = require('./contentValidator');
-const Sheet = require('./sheet');
-const ExceptionMessages = require('./exceptionMessages');
+import { InputSanitizer } from './inputSanitizer';
+import { Radar } from '../models/radar';
+import { Quadrant } from '../models/quadrant';
+import { Ring } from '../models/ring';
+import { Blip } from '../models/blip';
+import { GraphingRadar } from '../graphing/radar';
+import { MalformedDataError } from '../exceptions/malformedDataError';
+import { SheetNotFoundError } from '../exceptions/sheetNotFoundError';
+import { ContentValidator } from './contentValidator';
+import { Sheet } from './sheet';
+import { ExceptionMessages } from './exceptionMessages';
 
-const columns = require('./../../data/columns');
-const data = require('./../../data/data');
+import { columns } from './../../data/columns';
+import { data } from './../../data/data';
 
 const plotRadar = function (title, blips) {
     document.title = 'Tech Radar'; // document.title = title
@@ -307,4 +308,4 @@ function plotErrorMessage(exception) {
         .html(message);
 }
 
-module.exports = GoogleSheetInput;
+export { GoogleSheetInput };

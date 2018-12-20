@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Scala",
+    "ring": "adopt",
+    "quadrant": "engineering",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Kafka",
+    "ring": "adopt",
+    "quadrant": "engineering",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Go",
+    "ring": "assess",
+    "quadrant": "engineering",
+    "isNew": "FALSE",
+    "description": ""
+  }
+]
