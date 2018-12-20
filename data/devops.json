@@ -49,6 +49,20 @@
     "description": ""
   },
   {
+    "name": "Istio",
+    "ring": "trial",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Service Mesh",
+    "ring": "trial",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
   "name": "Prometheus",
   "ring": "adopt",
   "quadrant": "devops",
