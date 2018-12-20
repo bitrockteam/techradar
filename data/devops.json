@@ -28,7 +28,7 @@
     "description": ""
   },
   {
-    "name": "Confluent platform",
+    "name": "Confluent Platform",
     "ring": "adopt",
     "quadrant": "devops",
     "isNew": "FALSE",
