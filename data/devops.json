@@ -15,9 +15,9 @@
   },
   {
     "name": "Gitops",
-    "ring": "assess",
+    "ring": "adopt",
     "quadrant": "devops",
-    "isNew": "FALSE",
+    "isNew": "TRUE",
     "description": ""
   },
   {
