@@ -14,15 +14,50 @@
     "description": ""
   },
   {
-    "name": "Gitops",
-    "ring": "assess",
+    "name": "GitOps",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "TRUE",
+    "description": ""
+  },
+  {
+    "name": "Terraform",
+    "ring": "adopt",
     "quadrant": "devops",
     "isNew": "FALSE",
     "description": ""
   },
   {
+    "name": "Elasticsearch",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Hashicorp Vault",
+    "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "TRUE",
+    "description": ""
+  },
+  {
     "name": "FluentBit/Fluentd",
     "ring": "adopt",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Istio",
+    "ring": "trial",
+    "quadrant": "devops",
+    "isNew": "FALSE",
+    "description": ""
+  },
+  {
+    "name": "Service Mesh",
+    "ring": "trial",
     "quadrant": "devops",
     "isNew": "FALSE",
     "description": ""
