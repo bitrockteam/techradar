@@ -12,12 +12,12 @@ const plugins = [
   new HtmlWebpackPlugin({
     template: './src/index.html',
     chunks: ['main'],
-    // inject: 'body'
   }),
 
   new BundleAnalyzerPlugin({
     analyzerMode: isProd ? 'static' : 'server',
-    reportFilename: './report.html'
+    reportFilename: './report.html',
+    openAnalyzer: false
   })
 ];
 

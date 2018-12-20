@@ -1,66 +1,47 @@
-[![Build Status](https://travis-ci.org/thoughtworks/build-your-own-radar.svg?branch=master)](https://travis-ci.org/thoughtworks/build-your-own-radar)
+# techradar
+[![Build Status](https://travis-ci.org/bitrockteam/techradar.svg?branch=master)](https://travis-ci.org/bitrockteam/techradar)
 
-A library that generates an interactive radar, inspired by [thoughtworks.com/radar](http://thoughtworks.com/radar).
+An interactive radar, inspired by [thoughtworks.com/radar](http://thoughtworks.com/radar).
 
-## Demo
+## Install & use locally
+Latest [current or LTS Node.js](https://nodejs.org/en/) must be installed on your machine.
 
-You can see this in action at https://radar.thoughtworks.com. If you plug in [this data](https://docs.google.com/spreadsheets/d/1YXkrgV7Y6zShiPeyw4Y5_19QOfu5I6CyH5sGnbkEyiI/) you'll see [this visualization](https://radar.thoughtworks.com/?sheetId=1YXkrgV7Y6zShiPeyw4Y5_19QOfu5I6CyH5sGnbkEyiI). 
+Clone the repo:
+```bash
+$ git clone git@github.com:bitrockteam/techradar.git
+```
 
-## How To Use
+access the folder & install dependencies:
+```bash
+$ cd techradar && npm install
+```
 
-The easiest way to use the app out of the box is to provide a *public* Google Sheet ID from which all the data will be fetched. You can enter that ID into the input field on the first page of the application, and your radar will be generated. The data must conform to the format below for the radar to be generated correctly.
+start the development server:
+```bash
+$ npm start
+```
+open the browser and access the application at `localhost:8080`.
 
 ### Setting up your data
+In the `/data` folder there are four `.json` files, each one containing the data of its own quadrant. Data is provided as an array of objects following this schema:
 
-You need to make your data public in a form we can digest.
-
-Create a Google Sheet. Give it at least the below column headers, and put in the content that you want:
-
-| name          | ring   | quadrant               | isNew | description                                             |
-|---------------|--------|------------------------|-------|---------------------------------------------------------|
-| Composer      | adopt  | tools                  | TRUE  | Although the idea of dependency management ...          |
-| Canary builds | trial  | techniques             | FALSE | Many projects have external code dependencies ...       |
-| Apache Kylin  | assess | platforms              | TRUE  | Apache Kylin is an open source analytics solution ...   |
-| JSF           | hold   | languages & frameworks | FALSE | We continue to see teams run into trouble using JSF ... |
-
-### Sharing the sheet
-
-* In Google sheets, go to 'File', choose 'Publish to the web...' and then click 'Publish'.
-* Close the 'Publish to the web' dialog.
-* Copy the URL of your editable sheet from the browser (Don't worry, this does not share the editable version). 
-
-The URL will be similar to [https://docs.google.com/spreadsheets/d/1waDG0_W3-yNiAaUfxcZhTKvl7AUCgXwQw8mdPjCz86U/edit](https://docs.google.com/spreadsheets/d/1waDG0_W3-yNiAaUfxcZhTKvl7AUCgXwQw8mdPjCz86U/edit). In theory we are only interested in the part between '/d/' and '/edit' but you can use the whole URL if you want.
-
-### Using CSV data
-The other way to provide your data is using CSV document format.
-You can enter any URL that responds CSV data into the input field on the first page.
-The format is just the same as that of the Google Sheet, the example is as follows:
-
+```json
+{
+  "name": "Gitops",     // guess it...
+  "ring": "assess",     // hold, trial, assess, adopt
+  "quadrant": "devops", // devops, ui engineering, engineering, methodologies
+  "isNew": "FALSE",     // TRUE / FALSE
+  "description": ""     // guess it...
+}
 ```
-name,ring,quadrant,isNew,description  
-Composer,adopt,tools,TRUE,"Although the idea of dependency management ..."  
-Canary builds,trial,techniques,FALSE,"Many projects have external code dependencies ..."  
-Apache Kylin,assess,platforms,TRUE,"Apache Kylin is an open source analytics solution ..."  
-JSF,hold,languages & frameworks,FALSE,"We continue to see teams run into trouble using JSF ..."  
-```
-
-Note: The CSV file parsing is using D3 library, so consult the D3 documentation for the data format details.
 
 ### Building the radar
+Every time the `master` branch gets updated (*a direct commit or a merged PR*) a new Travis CI job is triggered and it composed basically of 2 steps:
 
-Paste the URL in the input field on the home page.
+1. create new build of static files
+2. deploy the build folder into the related gh-pages branch
 
-That's it!
-
-Note: the quadrants of the radar, and the order of the rings inside the radar will be drawn in the order they appear in your data.
-
-### More complex usage
-
-To create the data representation, you can use the Google Sheet [factory](/src/util/factory.js) or CSV, or you can also insert all your data straight into the code.
-
-The app uses [Tabletop.js](https://github.com/jsoma/tabletop) to fetch the data from a Google Sheet or [D3.js](https://d3js.org/) if supplied as CSV, so refer to their documentation for more advanced interaction.  The input data is sanitized by whitelisting HTML tags with [sanitize-html](https://github.com/punkave/sanitize-html).
-
-The application uses [webpack](https://webpack.github.io/) to package dependencies and minify all .js and .scss files.
+> The `master` branch it's admin locked!
 
 ## Docker Image
 We have released BYOR as a docker image for our users. The image is available in our [DockerHub Repo](https://hub.docker.com/r/wwwthoughtworks/build-your-own-radar/). To pull and run the image, run the following commands.
